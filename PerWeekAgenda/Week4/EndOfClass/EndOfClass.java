@@ -56,6 +56,12 @@ public class EndOfClass {
             3600000;//one one hour
             86400000;//one day
              */
+
+
+
+            //////////////////////
+            //FORMAT NOW DATE AND ELECTION DATE AS DEFAULT
+            //THEN GETTIMEMILLIS() / DIFF .
             System.out.println("Tester");
             System.out.println(Arrays.toString(getDaysHoursMinutes(6000L)));
         }

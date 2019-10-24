@@ -32,14 +32,14 @@ public class TicketFee
         {
             System.out.println(freeFee);
         }
-        else if (totalTime <= (minutesPerHour * 2))
+        else if (totalTime <= minutesPerHour * 2 + halfHour)
         {
             System.out.println(pay + " " + firstHourTier );
         }
-        else if (totalTime > (minutesPerHour * 2))
+        else if (totalTime > minutesPerHour * 2 + halfHour)
         {
-            int minAfterTwoHours = totalTime - (minutesPerHour * 2);
-            int minutesToBlocks = (minAfterTwoHours / halfHour);
+            int minAfterTwoAndHalfHours = totalTime - (minutesPerHour * 2 + halfHour);
+            int minutesToBlocks = (minAfterTwoAndHalfHours / halfHour);
             int blocksOf30Min = (int) Math.round(minutesToBlocks) + 1;
             finalFee = (halfHourTier * blocksOf30Min) + firstHourTier;
             //LOGIC
@@ -61,5 +61,7 @@ public class TicketFee
 
     public static void main(String[] args)
     {
-        CalculateFee(48, 33);     }
+
+        CalculateFee(24, 10);
+             }
 }

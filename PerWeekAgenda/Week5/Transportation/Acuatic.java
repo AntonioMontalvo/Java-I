@@ -1,11 +1,19 @@
 public class Acuatic extends Vehicle{
 	//Instance variables
-	public boolean floats;
+	public boolean floats = true;
 
 	//constructor
-	public Acuatic{
-
+	public Acuatic(){
+		super(true, true, true, true);
+		if (floats){
+			System.out.println("I float alright!!!  ;] ");	
+		}
+		
 	}
 
-	//methods
+	public static void main(String[] args) {
+		
+	}
+
+	
 }

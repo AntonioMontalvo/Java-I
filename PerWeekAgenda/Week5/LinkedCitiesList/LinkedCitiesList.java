@@ -28,17 +28,3 @@ public class LinkedCitiesList{
   }  
  }  
 }  
-// class LinkedList {
-
-
-// 	public static void main(String[] args) {
-// 		LinkedList <String> myCitiesList = new LinkedList <String>(); 
-// 		myCitiesList.add("Los Angeles");  
-//   		myCitiesList.add("Madrid");  
-//   		myCitiesList.add("D.F.");  
-//   		myCitiesList.add("Stockholm");
-//   		myCitiesList.add("Taipei");
-//   		myCitiesList.add("Beijing");
-//   		myCitiesList.add("Istambul"); 
-// 	}
-// }

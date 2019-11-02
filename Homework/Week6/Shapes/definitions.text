@@ -1,0 +1,56 @@
+POLYGON DEFINITION
+
+A polygon is any 2-dimensional shape formed with straight lines. Triangles, quadrilaterals, pentagons, and hexagons are all examples of polygons. The name tells you how many sides the shape has. 
+
+PERIMETER
+
+The distance around a polygon is called the perimeter. To find the perimeter of any polygon you add the lengths of its sides. 
+You can use the same method for finding the perimeter of an irregular polygon to find the perimeter of a regular polygon, but not the other way around.
+
+ 	1.Write down the length of each side of the polygon. 
+ 	2.Add up all of the lengths to find the perimeter. 
+
+AREA
+
+TRIANGLE'S AREA
+Heron's Formula for the area of a triangle(Hero's Formula)
+A method for calculating the area of a triangle when you know the lengths of all three sides.
+
+	Let a,b,c be the lengths of the sides of a triangle. The area is given by:
+	
+	Area	=	 √	p (p−a) (p−b) (p−c)   
+
+
+	where p is half the perimeter, or   a+b+c/2 
+
+	RECTANGLE'S AREA
+	To find the area of a rectangle, multiply the length by the width. 
+
+	The formula is:
+	Area = L * W
+	Where L is the length, W is the width, and * means multiply.
+
+/////////////////////////////////////////////////////////////////////
+CIRCLE DEFINITION
+
+-> A CIRCLE is a shape with all points the same distance from the center.
+
+-> The CIRCUMFERENCE is the distance around a circle.
+
+-> The DIAMETER is the distance across the circle through the center.
+ 
+  "PI" is the ratio of the circumference of a circle to the diameter. Thus, for any circle, if you divide the circumference by the diameter, you get a value close to "PI". This relationship is expressed in the following formula:
+
+	circumference / diameter = PI
+
+ -> The RADIUS of a circle is the distance from the center of a circle to any point on the circle. The diameter of a circle is twice as long as the radius. This relationship is expressed in the following circumference of a circle formula: 
+ 	diameter = radius * 2
+
+ -> The AREA of a circle is:
+
+ 	Area = PI * radius(square);
+
+
+
+
+

@@ -1,4 +1,4 @@
-public class Circle
+public class Circle implements Shape
 {	//instance variables
     public double radiusLength;
     public double diameter;

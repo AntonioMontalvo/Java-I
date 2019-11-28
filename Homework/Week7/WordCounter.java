@@ -16,11 +16,26 @@ public class WordCounter
 
     private void displayCount()
     {
-        count.forEach((k, v) -> System.out.println("Word -> " + k + " -> was used " + v + " times."));
+        count.forEach((k, v) ->
+
+
+         System.out.println("Word -> " + k + " -> was used " + v + " times."));
+    }
+
+    private void displayInOrder(){
+   // sorted keys output  thanks to T. GUIRADO for the tip!
+
+    Iterator i = count.iterator();
+    while(i.hasNext()){
+        String element = (String.next());
+        System.out.println(element);
+    }  
+
     }
 
     private int checkOccurrences(String word)
     {
+        int maxOccurrences = 0;
         int currentKey = 1;
         if(count.containsKey(word))
         {
@@ -61,6 +76,7 @@ public class WordCounter
             System.out.println("Here is a list of all the words used, and the amount of times each word was used.");
             System.out.println("");
             wc.displayCount();
+            wc.displayInOrder();
         }
         catch (Exception e)
         {

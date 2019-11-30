@@ -13,6 +13,6 @@ public class DisplayData {
             }
             System.out.println(" ");
         }
-        System.out.println("This is 0 2 "+rawData.readCSV()[2][2]);
+//        System.out.println("This is 0 2 "+rawData.readCSV()[2][2]);
     }
 }

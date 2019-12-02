@@ -9,7 +9,8 @@ public class Pairing {
     DataReader data = new DataReader();
     String [][] matrix  = data.readCSV();
 
-    //->get symbols from PromptUser
+    MathCalculations mathResults = new MathCalculations();
+
 
     //CURRENCY TO EXCHANGE//
     String myFiatSymbol = "EUR";
@@ -22,7 +23,8 @@ public class Pairing {
     String myWantedSymbolMeaning = "";
     double wantedFiatValue = 0;
 
-    public Pairing() throws FileNotFoundException {}
+
+    public Pairing() throws FileNotFoundException { }
 
     public void locateMyFiat() throws FileNotFoundException {
         //FIRST ASK USER FOR INPUT
@@ -45,6 +47,14 @@ public class Pairing {
 
         System.out.println("The current rate for the " + mySymbolMeaning + " is " + myFiatValue + " per US dollar");
         System.out.println("The current rate for the " + myWantedSymbolMeaning + " is " + wantedFiatValue + " per US dollar");
-        System.out.println("The amount you want to exchange is: " + valueToExchange);
+        System.out.println("The amount you want to exchange is: " + valueToExchange + " " + mySymbolMeaning);
+        System.out.println("");
+        System.out.println("//// The Results/////");
+        System.out.println("This is the amount of dollars you get for your currency " + mathResults.myFiatToDollars(myFiatValue, valueToExchange ));
+     
+        System.out.println("The total amount of is " + mathResults.dollarsToFinalFiat(wantedFiatValue));
+
+
+
     }
 }

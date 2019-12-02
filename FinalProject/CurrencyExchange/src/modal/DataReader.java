@@ -23,7 +23,6 @@ public class DataReader {
             }
             row++;
         }
-
         return matrix;
     }
 

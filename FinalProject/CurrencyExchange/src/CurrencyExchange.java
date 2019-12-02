@@ -18,14 +18,12 @@ public class CurrencyExchange {
         DisplayData viewData = new DisplayData();
         viewData.viewRawCSV();
 
-        PromptUser userInput = new PromptUser();
-        userInput.askFiatToExchange();
+
 
         DisplayExchange results = new DisplayExchange();
         results.result();
 
-        CaptureInput newView = new CaptureInput();
-        newView.manipulateCSV();
+
 
         Pairing matchFiat = new Pairing();
         matchFiat.locateMyFiat();

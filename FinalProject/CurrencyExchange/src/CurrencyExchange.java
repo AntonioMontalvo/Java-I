@@ -20,11 +20,6 @@ public class CurrencyExchange {
 
 
 
-        DisplayExchange results = new DisplayExchange();
-        results.result();
-
-
-
         Pairing matchFiat = new Pairing();
         matchFiat.locateMyFiat();
 
@@ -32,5 +27,8 @@ public class CurrencyExchange {
 
         MathCalculations mathConversion = new MathCalculations();
         mathConversion.converter();
+
+        DisplayExchange results = new DisplayExchange();
+        results.result();
     }
 }

@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class DataReader {
+
     //class method creates and returns a two dimensional array
     public String [] [] readCSV() throws FileNotFoundException {
         final int COUNTRIES = 200;

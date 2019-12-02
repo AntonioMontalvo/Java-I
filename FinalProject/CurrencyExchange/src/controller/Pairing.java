@@ -14,26 +14,24 @@ public class Pairing {
     //CURRENCY TO EXCHANGE//
     String myFiatSymbol = "EUR";
     String mySymbolMeaning = "";
-    double myFiatValue = 0;
+    double myFiatValue = 0.0;
+    double valueToExchange = 0.0;
 
-    //CURRENCY TO EXCHANGE//
+    //CURRENCY TO BUY//
     String myWantedSymbol = "GBP";
     String myWantedSymbolMeaning = "";
     double wantedFiatValue = 0;
 
-
-
-
-    public Pairing() throws FileNotFoundException {
-
-    }
+    public Pairing() throws FileNotFoundException {}
 
     public void locateMyFiat() throws FileNotFoundException {
+        //FIRST ASK USER FOR INPUT
         PromptUser userInput = new PromptUser();
        this.myFiatSymbol = userInput.askFiatToExchange();
        this.myWantedSymbol = userInput.askWantedFiat();
-       this.myFiatValue = userInput.askAmount();
+       this.valueToExchange = userInput.askAmount();
 
+       //ONCE WE'VE VERIFIED INPUT FIND AND SHOW REQUEST
         for (int i = 0; i < 167; i++) {
             if (matrix[i][0].contains(myFiatSymbol)) {
                 myFiatValue = Double.parseDouble(matrix[i][2]);
@@ -43,15 +41,10 @@ public class Pairing {
                 wantedFiatValue = Double.parseDouble(matrix[i][2]);
                 myWantedSymbolMeaning= matrix[i][1];
             }
-
-
-            System.out.println("controller.Pairing is on");
         }
+
         System.out.println("The current rate for the " + mySymbolMeaning + " is " + myFiatValue + " per US dollar");
         System.out.println("The current rate for the " + myWantedSymbolMeaning + " is " + wantedFiatValue + " per US dollar");
-        System.out.println("The amount you want to exchange is: " + myFiatValue);
+        System.out.println("The amount you want to exchange is: " + valueToExchange);
     }
-
-
-
 }

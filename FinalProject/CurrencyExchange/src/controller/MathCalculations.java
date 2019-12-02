@@ -3,6 +3,6 @@ package controller;
 public class MathCalculations {
 
     public void converter(){
-        System.out.println("controller.convertern is on");
+        System.out.println("****THIS IS MATH CALCULATIONS");
     }
 }

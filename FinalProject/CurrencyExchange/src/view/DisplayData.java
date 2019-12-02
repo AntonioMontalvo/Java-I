@@ -6,6 +6,7 @@ import java.io.FileNotFoundException;
 
 public class DisplayData {
     public void viewRawCSV() throws FileNotFoundException {
+        System.out.println("****THIS IS DISPLAY DATA****");
         DataReader rawData = new DataReader();
         for (int i = 0; i < 167; i++) {
             for (int j = 0; j < 3 ; j++) {
@@ -13,6 +14,5 @@ public class DisplayData {
             }
             System.out.println(" ");
         }
-//        System.out.println("This is 0 2 "+rawData.readCSV()[2][2]);
     }
 }

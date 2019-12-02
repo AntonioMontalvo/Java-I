@@ -44,15 +44,17 @@ public class Pairing {
                 myWantedSymbolMeaning= matrix[i][1];
             }
         }
-
+        System.out.println("/////Transaction Information/////");
         System.out.println("The current rate for the " + mySymbolMeaning + " is " + myFiatValue + " per US dollar");
         System.out.println("The current rate for the " + myWantedSymbolMeaning + " is " + wantedFiatValue + " per US dollar");
         System.out.println("The amount you want to exchange is: " + valueToExchange + " " + mySymbolMeaning);
+
         System.out.println("");
         System.out.println("//// The Results/////");
         System.out.println("This is the amount of dollars you get for your currency " + mathResults.myFiatToDollars(myFiatValue, valueToExchange ));
      
-        System.out.println("The total amount of is " + mathResults.dollarsToFinalFiat(wantedFiatValue));
+        System.out.println("The total amount of " + myWantedSymbolMeaning + " you get in exchange for your " +
+                mySymbolMeaning + " is: " + mathResults.dollarsToFinalFiat(wantedFiatValue));
 
 
 

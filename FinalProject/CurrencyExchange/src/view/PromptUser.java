@@ -15,14 +15,13 @@ public class PromptUser{
 
     public String  askFiatToExchange() throws FileNotFoundException {
         do {
-            System.out.println("");
             System.out.println("/////////////////////////////");
             System.out.println( "Introduce the symbol for the type of fiat currency you want to EXCHANGE. \n" +
-                    "For your convenience list of symbols is provided above.");
+                    "For your convenience, a list of symbols is provided above.");
             myFiatSymbol = userInput.nextLine().toUpperCase();
             if(testing.verify3Symbol(myFiatSymbol) ){
                 System.out.println("******ATTENTION*********");
-                System.out.println("Please remember, the symbol is 3 alphabetical characters only!  <~~~");
+                System.out.println("Please remember; the symbol you need to type is 3 letters only!  <~~~");
             }
             if(!testing.verifySymbolExists(myFiatSymbol)){
                 System.out.println("******ATTENTION*********");
@@ -30,26 +29,24 @@ public class PromptUser{
             }
 
         } while(testing.verify3Symbol(myFiatSymbol) || !testing.verifySymbolExists(myFiatSymbol));
-          // Read user input to uppercase
-        System.out.println("");
+        // Read user input to uppercase
         System.out.println("You have selected " + myFiatSymbol + " as your currency to exchange.");
         return myFiatSymbol;
     }
 
     public String askWantedFiat() throws FileNotFoundException {
         do {
-            System.out.println("");
             System.out.println( "Introduce a second symbol for the currency you  want to GET");
             myWantedSymbol = userInput.nextLine().toUpperCase();
             if(testing.verify3Symbol(myWantedSymbol)){
-                System.out.println("Please remember, the symbol is 3 alphabetical characters only! <~~~");
+                System.out.println("Please remember, the symbol you need to type is 3 letters only! <~~~");
             }
             if(!testing.verifySymbolExists(myWantedSymbol)){
                 System.out.println("That 'symbol' " + myWantedSymbol + " is not in our data base. Check your spelling and try again. <~~~");
             }
         } while(testing.verify3Symbol(myWantedSymbol) || !testing.verifySymbolExists(myWantedSymbol));
         // Read user input to uppercase
-        System.out.println("This the symbol of the currency you want " + myWantedSymbol);
+        System.out.println("The symbol of the currency you want is: " + myWantedSymbol);
         return myWantedSymbol;
     }
 

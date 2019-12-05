@@ -17,11 +17,8 @@ public class WordCounter
     private void displayCount()
     {
         count.forEach((k, v) ->
-
-
          System.out.println("Word -> " + k + " -> was used " + v + " times."));
     }
-
 
     private int checkOccurrences(String word)
     {
@@ -40,12 +37,12 @@ public class WordCounter
         int totalAmountOfWord = 0;
         try
         {
-            Scanner in = new Scanner(new FileReader("fear.txt"));
-            while(in.hasNextLine())
-            {
-                String content = in.next().toLowerCase() ;
+            Scanner in = new Scanner(new FileReader("src/Fear.txt"));
 
-                if(content.endsWith(",") || content.endsWith(")") || content.endsWith("?") || content.endsWith("'")) //get rid of the comas and parenthesis ",";
+            while(in.hasNext())
+            {
+                String content = in.next().toLowerCase();
+                if(content.endsWith(",") || content.endsWith(")") || content.endsWith("?") || content.endsWith("'") || content.endsWith(".")) //get rid of the comas and parenthesis ",";
                 {
                     content = content.substring(0, content.length() - 1);
                 }
@@ -57,11 +54,15 @@ public class WordCounter
                 {
                     content = content.replace("'", "");
                 }
+                if(content.contains("—")){
+                    int index = content.indexOf("—");
+                    content = content.replace("—", " ");
+                }
                 wc.count_words(content, wc.checkOccurrences(content));
                 totalAmountOfWord ++;
             }
             System.out.println("");
-            System.out.println("Justin Bieber used " + totalAmountOfWord + " words for this song.");
+            System.out.println("There are " + totalAmountOfWord + " words in Fear.text");
             System.out.println("");
             System.out.println("Here is a list of all the words used, and the amount of times each word was used.");
             System.out.println("");
@@ -70,6 +71,7 @@ public class WordCounter
         catch (Exception e)
         {
             System.err.println("Error " + e.getMessage());
+            e.printStackTrace();
         }
     }
 }

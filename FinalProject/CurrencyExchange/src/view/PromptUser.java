@@ -4,17 +4,15 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class PromptUser{
-
     private String myFiatSymbol = "";
-
     private boolean isDouble;
     private String myWantedSymbol = "";
 
     Scanner userInput = new Scanner(System.in);  // Create a Scanner object
-    CaptureInput testing = new CaptureInput();
+    CaptureInput testing = new CaptureInput(); // TO BE ABLE CALL VERIFICATION METHODS
 
     public String  askFiatToExchange() throws FileNotFoundException {
-        do {
+        do {// BE SURE THESE QUESTIONS ARE ANSWER CORRECTLY
             System.out.println("/////////////////////////////");
             System.out.println( "Introduce the symbol for the type of fiat currency you want to EXCHANGE. \n" +
                     "For your convenience, a list of symbols is provided above.");
@@ -27,7 +25,6 @@ public class PromptUser{
                 System.out.println("******ATTENTION*********");
                 System.out.println("That 'symbol' " + myFiatSymbol + " is not in our data base. Check your spelling and try again. <~~~");
             }
-
         } while(testing.verify3Symbol(myFiatSymbol) || !testing.verifySymbolExists(myFiatSymbol));
         // Read user input to uppercase
         System.out.println("You have selected " + myFiatSymbol + " as your currency to exchange.");
@@ -35,7 +32,7 @@ public class PromptUser{
     }
 
     public String askWantedFiat() throws FileNotFoundException {
-        do {
+        do {// BE SURE THESE QUESTIONS ARE ANSWER CORRECTLY
             System.out.println( "Introduce a second symbol for the currency you  want to GET");
             myWantedSymbol = userInput.nextLine().toUpperCase();
             if(testing.verify3Symbol(myWantedSymbol)){
@@ -52,9 +49,8 @@ public class PromptUser{
 
     public double askAmount(){
         double myFiatAmount = 0.0;
-        do{
+        do{// BE SURE THESE QUESTIONS ARE ANSWER CORRECTLY
             System.out.println("Introduce the AMOUNT you want to exchange. Type a double." );
-
             if(userInput.hasNextDouble()){
                 myFiatAmount = userInput.nextDouble();
                 isDouble = true;
@@ -66,5 +62,4 @@ public class PromptUser{
         }while (!(isDouble));
         return myFiatAmount;
     }
-
 }
